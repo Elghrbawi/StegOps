@@ -1,268 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StegOps: Steganography Operations Platform</title>
- <link href="main.css" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StegOps: Steganography Operations Platform</title>
+<link href="main.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo">STEGOPS</a>
-            <div class="nav-toggle" id="navToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#image-steg">Image StegOps</a></li>
-                <li><a href="#audio-steg">Audio StegOps</a></li>
-                <li><a href="#video-steg">Video StegOps</a></li>
-                <li><a href="#workflow">Workflow</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- Animated Background -->
-    <div class="bg-animation" id="bgAnimation"></div>
-    <div class="binary-rain" id="binaryRain"></div>
-    
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="logo-container">
-                <img src="logo2.png" alt="StegOps Logo" class="logo-image">
-            </div>
-            <div class="hero-vision-wrapper">
-                <div class="hero-content">
-                    <h1 class="tagline">Steganography Operations Platform</h1>
-                    <p class="subtitle">A comprehensive workshop for digital steganography. Configure, chain, and execute discrete operations to hide data within <b>Image</b>, <b>Audio</b>, <b>Video</b> files with real-time previews.</p>
-                </div>
-                <div class="vision-content-inline">
-                    <h2 class="vision-title-inline">Project Vision</h2>
-                    <p class="vision-text-inline">
-                        <b>StegOps</b> functions as an intuitive <span class="highlight">"operations workshop"</span> for digital steganography. 
-                        The name reflects our core philosophy: providing <span class="highlight">discrete, configurable operations</span> 
-                        that you can chain together for robust data hiding and extraction. Experience <span class="highlight">real-time previews</span> 
-                        to see the impact of your operations instantly before finalizing.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Features Section -->
-    <section class="features">
-        <div class="container">
-            <h2 class="section-title">Operational Modules</h2>
-
-            <!-- Image StegOps -->
-            <div class="module-section" id="image-steg">
-                <h3 class="module-title">Image StegOps</h3>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <span class="novel-badge">🔥 Novel Method</span>
-                        <div class="feature-icon">🔲</div>
-                        <h3>Border-Ops Encoding</h3>
-                        <p>Revolutionary technique: Text is converted to a 2D image and stored outside the visible canvas border of PNG files or within custom metadata chunks. Invisible to standard viewers and highly resistant to visual and forensic analysis.</p>
-                        <div>
-                            <span class="tech-tag">PNG Metadata</span>
-                            <span class="tech-tag">QR-like Encoding</span>
-                        </div>
-                    </div>
-
-                    <div class="feature-card">
-                        <div class="feature-icon">🔐</div>
-                        <h3>Crypto-Ops Pipeline</h3>
-                        <p>Build custom encryption chains before embedding (e.g., XOR → ROT13 → AES). Separates encryption (content secrecy) from steganography (existence secrecy), teaching crucial security principles.</p>
-                        <div>
-                            <span class="tech-tag">XOR</span>
-                            <span class="tech-tag">AES</span>
-                            <span class="tech-tag">DES</span>
-                            <span class="tech-tag">3DES</span>
-                            <span class="tech-tag">base64</span>
-                            <span class="tech-tag">etc</span>
-                        </div>
-                    </div>
-
-                    <div class="feature-card">
-                        <div class="feature-icon">🖼️</div>
-                        <h3>Image-In-Image Ops</h3>
-                        <p>Embed an entire secret image within a carrier image using LSB Matching or DWT (Discrete Wavelet Transform) to maintain the integrity of the hidden image upon extraction.</p>
-                        <div>
-                            <span class="tech-tag">LSB Matching</span>
-                            <span class="tech-tag">DWT</span>
-                        </div>
-                    </div>
-
-                    <div class="feature-card">
-                        <div class="feature-icon">📊</div>
-                        <h3>Frequency-Domain Ops (DCT)</h3>
-                        <p>Embed data within mid-frequency coefficients using Discrete Cosine Transform. Provides high robustness against JPEG compression, ideal for real-world image formats.</p>
-                        <div>
-                            <span class="tech-tag">DCT</span>
-                            <span class="tech-tag">JPEG-Safe</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Audio StegOps -->
-            <div class="module-section" id="audio-steg">
-                <h3 class="module-title">Audio StegOps</h3>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">🔉</div>
-                        <h3>LSB Ops</h3>
-                        <p>Fundamental operation of modifying the Least Significant Bits of an audio waveform to embed hidden data imperceptibly within audio files.</p>
-                        <div>
-                            <span class="tech-tag">Waveform Manipulation</span>
-                            <span class="tech-tag">LSB</span>
-                        </div>
-                    </div>
-
-                    <div class="feature-card">
-                        <span class="novel-badge">⚡ Cross-Modal</span>
-                        <div class="feature-icon">📈</div>
-                        <h3>Spectrogram-Ops</h3>
-                        <p>Encode a secret image into an audio file's spectrogram. When analyzed with a spectrogram viewer, the hidden image is revealed. A powerful image-to-audio operation.</p>
-                        <div>
-                            <span class="tech-tag">FFT</span>
-                            <span class="tech-tag">Image-to-Audio</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Video StegOps -->
-            <div class="module-section" id="video-steg">
-                <h3 class="module-title">Video StegOps</h3>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">🎞️</div>
-                        <h3>Frame-by-Frame Operations</h3>
-                        <p>Video operations treat content as sequential frame processing. Any image-based operation (LSB Ops, DCT Ops) can be applied frame-by-frame with optimized performance.</p>
-                        <div>
-                            <span class="tech-tag">Sequential Processing</span>
-                            <span class="tech-tag">Codec-Robust</span>
-                        </div>
-                    </div>
-
-                    <div class="feature-card">
-                        <div class="feature-icon">⚡</div>
-                        <h3>Real-Time Video Processing</h3>
-                        <p>Optimized algorithms handle computationally intensive operations for real-time video processing, ensuring robustness against video compression codecs.</p>
-                        <div>
-                            <span class="tech-tag">Performance Optimized</span>
-                            <span class="tech-tag">FFmpeg</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Real-time Preview Section -->
-    <section class="preview" id="workflow">
-        <div class="container">
-            <h2 class="section-title">Real-Time Operations Workflow</h2>
-            <div class="preview-container">
-                <div class="preview-mockup">
-                    <div class="workflow-steps">
-                        <div class="workflow-step">
-                            <div class="step-number">1</div>
-                            <h4>Select Operation</h4>
-                            <p>Choose from the 3 Operational Modules <b>Images</b>, <b>Audio</b>, <b>Video</b></p>
-                        </div>
-                        <div class="workflow-step">
-                            <div class="step-number">2</div>
-                            <h4>Configure Chain</h4>
-                            <p>Build your custom operation chain with multiple encryption and encoding layers</p>
-                        </div>
-                        <div class="workflow-step">
-                            <div class="step-number">3</div>
-                            <h4>Real-Time Preview</h4>
-                            <p>See the impact of operations on your carrier file instantly before finalizing</p>
-                        </div>
-                        <div class="workflow-step">
-                            <div class="step-number">4</div>
-                            <h4>Execute & Extract</h4>
-                            <p>Finalize the operation and easily extract hidden data using StegOps extraction tools</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Tech Stack Section -->
-    <section class="tech-stack">
-        <div class="container">
-            <h2 class="section-title">Technology Stack</h2>
-            <div class="tech-content">
-                <p class="tech-text">
-                    StegOps leverages cutting-edge technologies to provide powerful, configurable steganography operations. 
-                    Built with modern web technologies for real-time processing and intuitive user experience.
-                </p>
-
-                <div class="tech-grid">
-                    <div class="tech-item">
-                        <div class="tech-item-title">Frontend</div>
-                        <div class="tech-item-desc">React.js for dynamic SPA with real-time components</div>
-                    </div>
-                    <div class="tech-item">
-                        <div class="tech-item-title">Backend</div>
-                        <div class="tech-item-desc">Node.js/Express or Python/Flask</div>
-                    </div>
-                    <div class="tech-item">
-                        <div class="tech-item-title">Image Processing</div>
-                        <div class="tech-item-desc">OpenCV.js, Pillow</div>
-                    </div>
-                    <div class="tech-item">
-                        <div class="tech-item-title">Audio/Video</div>
-                        <div class="tech-item-desc">Web Audio API, FFmpeg.wasm</div>
-                    </div>
-                    <div class="tech-item">
-                        <div class="tech-item-title">Cryptography</div>
-                        <div class="tech-item-desc">Web Crypto API, AES, XOR</div>
-                    </div>
-                    <div class="tech-item">
-                        <div class="tech-item-title">Algorithms</div>
-                        <div class="tech-item-desc">DCT, DWT, LSB, FFT</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- CTA Section -->
-    <section class="cta">
-        <div class="container">
-            <h2 class="section-title">Experience StegOps</h2>
-            <p class="subtitle" style="margin-bottom: 40px;">
-                Educational, innovative, and comprehensive—StegOps is where cryptography meets steganography in a unified operations platform.
-            </p>
-            <div class="cta-buttons">
-                <button class="btn btn-secondary">Aly Ahmed</button>
-                <button class="btn btn-secondary">Mostafa Mohamed</button>
-                <button class="btn btn-secondary">Khaled Ahmed</button>
-                <button class="btn btn-secondary">Ahmed Amr</button>
-                <button class="btn btn-secondary">Youessf Osama</button>
-                <button class="btn btn-secondary">Ahmed Ali</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>StegOps: Steganography Operations Platform | A Multi-Modal Steganography Platform with Real-Time Operations</p>
-            <p style="margin-top: 10px; opacity: 0.7;">© 2025 StegOps Project. Built with security and innovation in mind.</p>
-        </div>
-    </footer>
-    
- <script src="main.js" ></script>
+<nav class="navbar">
+<div class="nav-container">
+<a href="index.html" class="nav-logo">STEGOPS</a>
+<div class="nav-toggle" id="navToggle">
+<span></span>
+<span></span>
+<span></span>
+</div>
+<ul class="nav-links" id="navLinks">
+<li><a href="#image-steg">Image StegOps</a></li>
+<li><a href="#audio-steg">Audio StegOps</a></li>
+<li><a href="#video-steg">Video StegOps</a></li>
+<li><a href="#workflow">Workflow</a></li>
+</ul>
+</div>
+</nav>
+<div class="bg-animation" id="bgAnimation"></div>
+<div class="binary-rain" id="binaryRain"></div>
+<section class="hero">
+<div class="container">
+<div class="logo-container">
+<img src="logo2.png" alt="StegOps Logo" class="logo-image">
+</div>
+<div class="hero-vision-wrapper">
+<div class="hero-content">
+<h1 class="tagline">Steganography Operations Platform</h1>
+<p class="subtitle">A comprehensive workshop for digital steganography. Configure, chain, and execute discrete operations to hide data within <b>Image</b>, <b>Audio</b>, <b>Video</b> files with real-time previews.</p>
+</div>
+<div class="vision-content-inline">
+<h2 class="vision-title-inline">Project Vision</h2>
+<p class="vision-text-inline">
+<b>StegOps</b> functions as an intuitive <span class="highlight">"operations workshop"</span> for digital steganography. The name reflects our core philosophy: providing <span class="highlight">discrete, configurable operations</span> that you can chain together for robust data hiding and extraction. Experience <span class="highlight">real-time previews</span> to see the impact of your operations instantly before finalizing.
+</p>
+</div>
+</div>
+</div>
+</section>
+<section class="features">
+<div class="container">
+<h2 class="section-title">Operational Modules</h2>
+<div class="module-section" id="image-steg">
+<h3 class="module-title">Image StegOps</h3>
+<div class="features-grid">
+<div class="feature-card">
+<div class="feature-icon">▣</div>
+<h3>Border-Ops Encoding</h3>
+<p>Revolutionary technique: Text is converted to a 2D image and stored outside the visible canvas border of PNG files or within custom metadata chunks. Invisible to standard viewers and highly resistant to visual and forensic analysis.</p>
+<div>
+<span class="tech-tag">PNG Metadata</span>
+<span class="tech-tag">QR-like Encoding</span>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">⬢</div>
+<h3>Crypto-Ops Pipeline</h3>
+<p>Build custom encryption chains before embedding (e.g., XOR → ROT13 → AES). Separates encryption (content secrecy) from steganography (existence secrecy), teaching crucial security principles.</p>
+<div>
+<span class="tech-tag">XOR</span>
+<span class="tech-tag">AES</span>
+<span class="tech-tag">DES</span>
+<span class="tech-tag">3DES</span>
+<span class="tech-tag">base64</span>
+<span class="tech-tag">etc</span>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">◈</div>
+<h3>Image-In-Image Ops</h3>
+<p>Embed an entire secret image within a carrier image using LSB Matching or DWT (Discrete Wavelet Transform) to maintain the integrity of the hidden image upon extraction.</p>
+<div>
+<span class="tech-tag">LSB Matching</span>
+<span class="tech-tag">DWT</span>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">◧</div>
+<h3>Frequency-Domain Ops (DCT)</h3>
+<p>Embed data within mid-frequency coefficients using Discrete Cosine Transform. Provides high robustness against JPEG compression, ideal for real-world image formats.</p>
+<div>
+<span class="tech-tag">DCT</span>
+<span class="tech-tag">JPEG-Safe</span>
+</div>
+</div>
+</div>
+</div>
+<div class="module-section" id="audio-steg">
+<h3 class="module-title">Audio StegOps</h3>
+<div class="features-grid">
+<div class="feature-card">
+<div class="feature-icon">◭</div>
+<h3>LSB Ops</h3>
+<p>Fundamental operation of modifying the Least Significant Bits of an audio waveform to embed hidden data imperceptibly within audio files.</p>
+<div>
+<span class="tech-tag">Waveform Manipulation</span>
+<span class="tech-tag">LSB</span>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">◮</div>
+<h3>Spectrogram-Ops</h3>
+<p>Encode a secret image into an audio file's spectrogram. When analyzed with a spectrogram viewer, the hidden image is revealed. A powerful image-to-audio operation.</p>
+<div>
+<span class="tech-tag">FFT</span>
+<span class="tech-tag">Image-to-Audio</span>
+</div>
+</div>
+</div>
+</div>
+<div class="module-section" id="video-steg">
+<h3 class="module-title">Video StegOps</h3>
+<div class="features-grid">
+<div class="feature-card">
+<div class="feature-icon">◩</div>
+<h3>Frame-by-Frame Operations</h3>
+<p>Video operations treat content as sequential frame processing. Any image-based operation (LSB Ops, DCT Ops) can be applied frame-by-frame with optimized performance.</p>
+<div>
+<span class="tech-tag">Sequential Processing</span>
+<span class="tech-tag">Codec-Robust</span>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">◪</div>
+<h3>Real-Time Video Processing</h3>
+<p>Optimized algorithms handle computationally intensive operations for real-time video processing, ensuring robustness against video compression codecs.</p>
+<div>
+<span class="tech-tag">Performance Optimized</span>
+<span class="tech-tag">FFmpeg</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="preview" id="workflow">
+<div class="container">
+<h2 class="section-title">Real-Time Operations Workflow</h2>
+<div class="preview-container">
+<div class="preview-mockup">
+<div class="workflow-steps">
+<div class="workflow-step">
+<div class="step-number">1</div>
+<h4>Select Operation</h4>
+<p>Choose from the 3 Operational Modules <b>Images</b>, <b>Audio</b>, <b>Video</b></p>
+</div>
+<div class="workflow-step">
+<div class="step-number">2</div>
+<h4>Configure Chain</h4>
+<p>Build your custom operation chain with multiple encryption and encoding layers</p>
+</div>
+<div class="workflow-step">
+<div class="step-number">3</div>
+<h4>Real-Time Preview</h4>
+<p>See the impact of operations on your carrier file instantly before finalizing</p>
+</div>
+<div class="workflow-step">
+<div class="step-number">4</div>
+<h4>Execute & Extract</h4>
+<p>Finalize the operation and easily extract hidden data using StegOps extraction tools</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="tech-stack">
+<div class="container">
+<h2 class="section-title">Technology Stack</h2>
+<div class="tech-content">
+<p class="tech-text">StegOps leverages cutting-edge technologies to provide powerful, configurable steganography operations. Built with modern web technologies for real-time processing and intuitive user experience.</p>
+<div class="tech-grid">
+<div class="tech-item">
+<div class="tech-item-title">Frontend</div>
+<div class="tech-item-desc">React.js for dynamic SPA with real-time components</div>
+</div>
+<div class="tech-item">
+<div class="tech-item-title">Backend</div>
+<div class="tech-item-desc">Node.js/Express or Python/Flask</div>
+</div>
+<div class="tech-item">
+<div class="tech-item-title">Image Processing</div>
+<div class="tech-item-desc">OpenCV.js, Pillow</div>
+</div>
+<div class="tech-item">
+<div class="tech-item-title">Audio/Video</div>
+<div class="tech-item-desc">Web Audio API, FFmpeg.wasm</div>
+</div>
+<div class="tech-item">
+<div class="tech-item-title">Cryptography</div>
+<div class="tech-item-desc">Web Crypto API, AES, XOR</div>
+</div>
+<div class="tech-item">
+<div class="tech-item-title">Algorithms</div>
+<div class="tech-item-desc">DCT, DWT, LSB, FFT</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="cta">
+<div class="container">
+<h2 class="section-title">Experience StegOps</h2>
+<p class="subtitle" style="margin-bottom: 40px;">Educational, innovative, and comprehensive—StegOps is where cryptography meets steganography in a unified operations platform.</p>
+<div class="cta-buttons">
+<a href="https://github.com/Elghrbawi" target="_blank" class="btn btn-secondary">Aly Ahmed</a>
+<a href="https://github.com/TheRasputin64" target="_blank" class="btn btn-secondary">Mostafa Mohamed</a>
+<button class="btn btn-secondary">Khaled Ahmed</button>
+<button class="btn btn-secondary">Ahmed Amr</button>
+<a href="https://github.com/yousefosama19" target="_blank" class="btn btn-secondary">Youessf Osama</a>
+<button class="btn btn-secondary">Ahmed Ali</button>
+</div>
+</div>
+</section>
+<footer class="footer">
+<div class="container">
+<p>StegOps: Steganography Operations Platform | A Multi-Modal Steganography Platform with Real-Time Operations</p>
+<p style="margin-top: 10px; opacity: 0.7;">© 2025 StegOps Project. Built with security and innovation in mind.</p>
+</div>
+</footer>
+<script src="main.js"></script>
 </body>
 </html>
